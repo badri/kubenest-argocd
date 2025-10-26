@@ -1,0 +1,18 @@
+configMap:
+  enabled: true
+container:
+  port: 80
+containerPort: 80
+deployment:
+  replicaCount: 1
+image:
+  pullPolicy: IfNotPresent
+  repository: nginx
+  tag: latest
+ingress:
+  enabled: false
+replicaCount: 1
+service:
+  enabled: true
+  port: 80
+  type: ClusterIP
