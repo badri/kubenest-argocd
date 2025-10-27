@@ -1,0 +1,9 @@
+apiVersion: v2
+name: nginx-chart-fix-test
+description: Kubenest workload nginx-chart-fix-test
+type: application
+version: 1.0.0
+dependencies:
+  - name: kubenest-workload
+    version: "*"
+    repository: https://docs.kubenest.io
