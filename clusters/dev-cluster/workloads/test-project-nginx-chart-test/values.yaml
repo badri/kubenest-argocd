@@ -7,7 +7,7 @@
 #   kubectl edit workload nginx-chart-test -n test-project
 #
 # Source: Workload/test-project/nginx-chart-test
-# Generated: 2025-10-27T09:04:03Z
+# Generated: 2025-10-27T09:04:04Z
 # ============================================================================
 
 configMap:
