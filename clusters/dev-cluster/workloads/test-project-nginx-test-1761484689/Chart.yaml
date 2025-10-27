@@ -1,0 +1,9 @@
+apiVersion: v2
+name: nginx-test-1761484689
+description: Kubenest workload nginx-test-1761484689
+type: application
+version: 1.0.0
+dependencies:
+  - name: kubenest-workload
+    version: "*"
+    repository: https://docs.kubenest.io
