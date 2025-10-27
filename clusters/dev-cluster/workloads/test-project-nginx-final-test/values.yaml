@@ -7,7 +7,7 @@
 #   kubectl edit workload nginx-final-test -n test-project
 #
 # Source: Workload/test-project/nginx-final-test
-# Generated: 2025-10-27T09:37:28Z
+# Generated: 2025-10-27T09:39:04Z
 # ============================================================================
 
 configMap:
