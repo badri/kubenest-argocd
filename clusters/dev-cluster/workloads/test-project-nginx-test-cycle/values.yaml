@@ -7,13 +7,16 @@
 #   kubectl edit workload nginx-test-cycle -n test-project
 #
 # Source: Workload/test-project/nginx-test-cycle
-# Generated: 2025-10-28T04:05:14Z
+# Generated: 2025-10-28T04:07:38Z
 # ============================================================================
 
 kubenest-workload:
   configMap:
     enabled: true
   container:
+    env:
+    - name: TEST_ENV
+      value: test-value
     port: 80
     resources:
       limits:
@@ -24,16 +27,17 @@ kubenest-workload:
         memory: 128Mi
   containerPort: 80
   deployment:
-    replicaCount: 1
+    replicaCount: 2
+  env:
+  - name: TEST_ENV
+    value: test-value
   image:
     pullPolicy: IfNotPresent
     repository: nginx
     tag: 1.25-alpine
   ingress:
-    enabled: true
-    host: nginx-test-cycle.test-project.kubenest.dev
-    path: /
-  replicaCount: 1
+    enabled: false
+  replicaCount: 2
   resources:
     limits:
       cpu: 200m
