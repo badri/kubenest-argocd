@@ -7,7 +7,7 @@
 #   kubectl edit workload nginx-test-cycle -n test-project
 #
 # Source: Workload/test-project/nginx-test-cycle
-# Generated: 2025-10-28T04:05:12Z
+# Generated: 2025-10-28T04:05:14Z
 # ============================================================================
 
 kubenest-workload:
