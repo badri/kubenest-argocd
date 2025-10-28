@@ -1,0 +1,9 @@
+apiVersion: v2
+name: nginx-test-cycle
+description: Kubenest workload nginx-test-cycle
+type: application
+version: 1.0.0
+dependencies:
+  - name: kubenest-workload
+    version: "*"
+    repository: https://docs.kubenest.io/charts
