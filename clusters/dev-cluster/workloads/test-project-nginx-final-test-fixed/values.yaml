@@ -7,13 +7,31 @@
 #   kubectl edit workload nginx-final-test-fixed -n test-project
 #
 # Source: Workload/test-project/nginx-final-test-fixed
-# Generated: 2025-10-28T01:46:23Z
+# Generated: 2025-10-28T02:22:43Z
 # ============================================================================
 
-configMap:
-  enabled: true
-container:
-  port: 80
+kubenest-workload:
+  configMap:
+    enabled: true
+  container:
+    port: 80
+    resources:
+      limits:
+        cpu: 200m
+        memory: 256Mi
+      requests:
+        cpu: 50m
+        memory: 64Mi
+  containerPort: 80
+  deployment:
+    replicaCount: 1
+  image:
+    pullPolicy: IfNotPresent
+    repository: nginx
+    tag: latest
+  ingress:
+    enabled: false
+  replicaCount: 1
   resources:
     limits:
       cpu: 200m
@@ -21,24 +39,7 @@ container:
     requests:
       cpu: 50m
       memory: 64Mi
-containerPort: 80
-deployment:
-  replicaCount: 1
-image:
-  pullPolicy: IfNotPresent
-  repository: nginx
-  tag: latest
-ingress:
-  enabled: false
-replicaCount: 1
-resources:
-  limits:
-    cpu: 200m
-    memory: 256Mi
-  requests:
-    cpu: 50m
-    memory: 64Mi
-service:
-  enabled: true
-  port: 80
-  type: ClusterIP
+  service:
+    enabled: true
+    port: 80
+    type: ClusterIP
