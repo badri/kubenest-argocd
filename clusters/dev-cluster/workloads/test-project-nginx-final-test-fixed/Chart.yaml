@@ -1,0 +1,9 @@
+apiVersion: v2
+name: nginx-final-test-fixed
+description: Kubenest workload nginx-final-test-fixed
+type: application
+version: 1.0.0
+dependencies:
+  - name: kubenest-workload
+    version: "*"
+    repository: https://docs.kubenest.io/charts
